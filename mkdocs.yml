@@ -1,0 +1,23 @@
+site_name: "Jonathan's Website"
+theme:
+  name: material
+  palette:
+    primary: custom
+  font:
+    text: Avenir
+  logo: images/scribble-icon.png
+extra:
+  generator: false # Remove MkDocs link in footer
+extra_css:
+#  - 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
+  - stylesheets/main.css
+#extra_javascript:
+#  - 'https://code.jquery.com/jquery-3.2.1.slim.min.js'
+#  - 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'
+#  - 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'
+plugins:
+  - blog:
+      blog_dir: journal
+  - tags
+
+

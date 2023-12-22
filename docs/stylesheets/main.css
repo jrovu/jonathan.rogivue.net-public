@@ -1,0 +1,39 @@
+:root {
+  --md-primary-fg-color:        #2E1056;
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir\ Regular.ttf') format('ttf');
+    
+  }
+  
+.md-header__topic:first-child {
+  font-weight: normal;
+}
+
+.md-typeset {
+  font-size:16px;
+}
+
+.md-nav {
+  font-size:16px;
+}
+
+.md-nav__title {
+  display: none;
+}
+
+body {
+  font-family: 'Avenir', sans-serif;
+}
+
+.md-typeset a {
+  color: #932626;
+  font-weight: bold;
+}
+
+label {
+  margin-bottom: 0;
+}
