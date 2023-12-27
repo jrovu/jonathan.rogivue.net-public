@@ -1,13 +1,17 @@
-# About this Site
+---
+title: "About this site"
+tags: [draft, scratch-notes, goals, to-do]
+published: 2023-12-27
+updated: 2023-12-27
+---
 
-Updated: 2023-11-06
+# About this site / Vision
 
 ## Vision / Progress
 
 - ✔  This is a"Lo-fi" website - Mostly text files in a folder, along with images, and other media
 - Philosophy: 
   - https://squidfunk.github.io/mkdocs-material/philosophy/
-
 - 🔲 All pages print nicely - viewable & exportable as HTML, PDF, Ebook
 - 🔲 Content & Publishing System designed to last 20+ years
   - Minimal dependency on external services

@@ -7,9 +7,9 @@ title: "Home"
 
 My name is Jonathan - Welcome to my personal website. 
 
-- [Contact me](about/JRO/contact-jro/)
+- [Contact me](about/JRO/contact-jro.md)
 - News
   - Personal Newsletter
 - Projects
-- [About this Website](about/website/about-site/) - It's Lo-Fi.
+- [About this Website](about/website/about-site.md) - It's Lo-Fi.
 
