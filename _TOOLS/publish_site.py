@@ -12,16 +12,22 @@
 #
 # Development Backlog
 # --------------------
+# - [ ] Tool accepts arguments (currently hard-coded)
+#       - Site directory
+# - [ ] Clears network cache (AWS Cloudfront)
 # - [ ] One-click button (MacOS dock icon, runs the script)
 # - [ ] Initial-setup automation (Terraform setup AWS S3, CloudFront, Certs, Route 53, etc)
 
-# Requirements
+# Required modules
+# ------------------
 import subprocess
-# Documentation: https://docs.python.org/3/library/subprocess.html
+# Subprocess Documentation: https://docs.python.org/3/library/subprocess.html
 
 
-# INPUT
+# INPUT ARGUMENTS
 local_files = "/Users/jro/JRO-Sync/_Websites/Jonathan.Rogivue.net/"
+s3_bucket_url = "s3://jonathan.rogivue.net-public/"
+
 mkdocs_config = local_files + "mkdocs.yml"
 local_built_site = local_files + "site/"
 local_repository_path = local_files
@@ -65,4 +71,4 @@ subprocess.run(["linkchecker", local_built_site])
 print("----------")
 print("▶ Upload-syncing local files to remote file server (AWS S3)")
 print("----------")
-subprocess.run(["aws", "s3", "sync", local_built_site, "s3://jonathan.rogivue.net-public"])
+subprocess.run(["aws", "s3", "sync", local_built_site, s3_bucket_url])
