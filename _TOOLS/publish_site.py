@@ -34,7 +34,7 @@ s3_bucket_url = "s3://jonathan.rogivue.net-public/"
 mkdocs_config = local_files + "mkdocs.yml"
 local_built_site = local_files + "site/"
 local_repository_path = local_files
-# - remote_repository = (GitHub URL)
+# - remote_repository = "https://github.com/jrovu/jonathan.rogivue.net-public.git"
 # - domain_name
 
 
