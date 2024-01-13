@@ -20,6 +20,10 @@ import subprocess
 
 
 # INPUT
+local_files = "/Users/jro/JRO-Sync/_Websites/Jonathan.Rogivue.net/"
+mkdocs_config = local_files + "mkdocs.yml"
+local_built_site = local_files + "site/"
+local_repository_path = local_files
 # - remote_repository = (GitHub URL)
 # - domain_name
 
@@ -37,26 +41,27 @@ print("----------")
 print("----------")
 print("▶ Committing changes to Repository (git)")
 print("----------")
-subprocess.run(["git", "add", "."])
+subprocess.run(["git", "add", local_files], cwd=local_repository_path)
 commit_message = "Content changes - Deployment automation"
-subprocess.run(["git", "commit", "-m", commit_message]) 
+subprocess.run(["git", "commit", "-m", commit_message], cwd=local_repository_path) 
 
 
 # Build site using MkDocs
 print("----------")
 print("▶ Running MkDocs build...")
 print("----------")
-subprocess.run(["mkdocs", "build"])
+subprocess.run(["mkdocs", "build", "--config-file", mkdocs_config])
+
 
 # Check Links
 print("----------")
 print("▶ Checking local files for broken links...")
 print("----------")
-subprocess.run(["linkchecker", "site/index.html"])
+subprocess.run(["linkchecker", local_built_site])
 
 # Upload/Sync to File server (AWS S3)
 # Documentation: https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/sync.html
 print("----------")
 print("▶ Upload-syncing local files to remote file server (AWS S3)")
 print("----------")
-subprocess.run(["aws", "s3", "sync", "site/", "s3://jonathan.rogivue.net-public"])
+subprocess.run(["aws", "s3", "sync", local_built_site, "s3://jonathan.rogivue.net-public"])
