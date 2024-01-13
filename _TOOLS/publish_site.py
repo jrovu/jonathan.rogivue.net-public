@@ -24,7 +24,10 @@
 # ------------------
 import subprocess
 # Subprocess Documentation: https://docs.python.org/3/library/subprocess.html
-
+# AWS CLI
+# Git
+# MkDocs
+# Linkchecker
 
 # INPUT ARGUMENTS
 local_files = "/Users/jro/JRO-Sync/_Websites/Jonathan.Rogivue.net/"
