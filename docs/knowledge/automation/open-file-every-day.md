@@ -1,11 +1,11 @@
 ---
 title: "Play a playlist every day"
-tags: [automation, macOS, VLC, how-to]
+tags: [draft, automation, macOS, VLC, how-to]
 ---
 
 
 
-I'd like to play a playlist of videos every day, so I can 
+I'd like to play a playlist of videos every day. 
 
 
 

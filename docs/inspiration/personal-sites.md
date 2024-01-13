@@ -1,6 +1,6 @@
 ---
 title: "Inspiration: Personal Websites"
-tags: [websites, writing]
+tags: [inspiration, websites, writing]
 ---
 
 [Paul Graham](https://paulgraham.com/)

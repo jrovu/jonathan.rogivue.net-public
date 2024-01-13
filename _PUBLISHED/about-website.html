@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>About this Website</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../_Styles/main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">About this Website</h1>
+</header>
+<h1 id="about-this-site">About this Site</h1>
+<p>Updated: 2023-11-06</p>
+<h2 id="vision">Vision</h2>
+<ul>
+<li><label><input type="checkbox" checked="" />This is a”Lo-fi” website
+- Mostly text files in a folder, along with images, and other
+media</label></li>
+<li><label><input type="checkbox" />All pages print nicely - viewable
+&amp; exportable as HTML, PDF, Ebook</label></li>
+<li><label><input type="checkbox" />Content &amp; Publishing System
+designed to last 20+ years</label>
+<ul>
+<li>Minimal dependency on external services</li>
+<li>open-source tools, content, format</li>
+</ul></li>
+<li><label><input type="checkbox" checked="" />Easy to author (Typora +
+Markdown)</label></li>
+<li><label><input type="checkbox" checked="" />Can edit site using
+Laptop (MacBook)</label></li>
+<li><label><input type="checkbox" />Can edit site using Phone
+(iPhone)</label></li>
+<li><label><input type="checkbox" checked="" />Can publish site from
+Laptop</label></li>
+<li><label><input type="checkbox" />Can publish site from Phone</label>
+<ul>
+<li>WorkingCopy?</li>
+</ul></li>
+<li><label><input type="checkbox" />All content is versioned, and
+mistakes can be easily rolled-back (Git, GitHub)</label></li>
+<li><label><input type="checkbox" />All content is regularly backed
+up</label>
+<ul>
+<li>Locally (MacOS TimeMachine)</li>
+<li>External storage (2 TB, USB-C drive)</li>
+<li>Network Storage (Synology NAS)</li>
+<li>Remote Storage (AWS S3, AWS Glacier)</li>
+</ul></li>
+<li>Media files (images, music, video, etc) are grouped with
+content.</li>
+<li>Automatically checks for broken links before publishing
+<ul>
+<li><a href="https://pypi.org/project/LinkChecker/">LinkChecker</a></li>
+</ul></li>
+</ul>
+<h2 id="how-this-site-is-built">How this Site is Built</h2>
+<h3 id="tools">Tools</h3>
+<ul>
+<li>Public Hosting
+<ul>
+<li>Domain name: NameCheap</li>
+<li>Public Storage: AWS S3
+<ul>
+<li><a
+href="https://s3.console.aws.amazon.com/s3/buckets/j-rogivue-net?region=us-east-2&amp;tab=objects">Link
+to Bucket in AWS Admin</a></li>
+</ul></li>
+<li>Content distribution, caching, security (HTTPS): AWS CloudFront
+<ul>
+<li>(Link to Cloudfront Distribution)</li>
+</ul></li>
+</ul></li>
+<li>Local Setup
+<ul>
+<li>Computer: MacBook Pro 14” (2021)</li>
+<li>Operating System: MacOS Sonoma 14.1</li>
+<li>Text editor: <a href="https://typora.io/">Typora</a> - Markdown text
+editor for MacOS
+<ul>
+<li>Alternative: Visual Studio Code</li>
+</ul></li>
+<li>Text format: <a
+href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></li>
+<li>Remote Storage locally mounted on MacOS:
+<ul>
+<li>(?) Mac Version of <a
+href="https://github.com/awslabs/mountpoint-s3">Mountpoint for
+S3</a></li>
+</ul></li>
+<li>Content versioning: <a href="https://git-scm.com/">Git</a></li>
+<li>Content repository: GitHub?</li>
+<li>File sync: AWS Sync
+<ul>
+<li><a
+href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html">AWS
+CLI</a>
+<ul>
+<li><a
+href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Installation
+for Mac</a></li>
+<li><a
+href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html">Configure
+AWS CLI</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="processes">Processes</h2>
+<h3 id="initial-setup">Initial Setup</h3>
+<ul>
+<li>Initialize content versioning in top level directory
+<ul>
+<li><code>git init</code></li>
+</ul></li>
+<li>Commit changes &amp; publish to remote repository</li>
+</ul>
+<h3 id="create-content">Create Content</h3>
+<ul>
+<li>On MacBook, Open Typora.app</li>
+<li>Drag ~/Websites/(Sitename) folder into Typora</li>
+<li>Pull down latest changes from Content Repository</li>
+<li>Open <a href="/content-to-publish.html">Content To Publish</a></li>
+<li>Prioritize the list, and start writing!</li>
+</ul>
+<h3 id="publish-the-site">Publish the site</h3>
+<ul>
+<li>Terminal Commands
+<ul>
+<li><code>cd ~/Websites/(sitename)</code></li>
+<li>(To Write) <code>tools/markdown-to-site.rb</code></li>
+<li>Converts directory of markdown to HTML
+<ul>
+<li>Combines navigation &amp; styles</li>
+</ul></li>
+<li>Opens homepage</li>
+<li>(To Write) <code>tools/publish-site.rb</code></li>
+<li>Copies site to AWS S3 bucket using rsync</li>
+<li>(To write)
+<code>rsync ~/Websites/(sitename)/_PUB aws://(Bucket)</code></li>
+</ul></li>
+<li>Convert Markdown to HTML: <a href="https://pandoc.org/">Pandoc</a>
+<ul>
+<li>Inputs Markdown text, Outputs HTML text
+<ul>
+<li>`pandoc (input-filename).md -t html -s -o
+(output-filename).html</li>
+<li><code>-t</code>: To format (HTML)</li>
+<li>(Include custom styles)</li>
+<li><code>-s</code> : Complete HTML page</li>
+</ul></li>
+<li>Adds Navigation, Style sheets:
+<ul>
+<li><code>pandoc -B</code>: Include content Before the main content (e.g
+navigation)</li>
+</ul></li>
+<li>(Command to convert a folder of markdown files to an HTML site)</li>
+</ul></li>
+<li>Clear cache</li>
+</ul>
+<h3 id="links">Links</h3>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="contact-jro.html">Contact JRO</a></li>
+</ul>
+</body>
+</html>
