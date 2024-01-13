@@ -12,6 +12,8 @@
 #
 # Development Backlog
 # --------------------
+# - [ ] Github users tokens
+#       Info: https://github.com/settings/tokens
 # - [ ] Tool accepts arguments (currently hard-coded)
 #       - Site directory
 # - [ ] Clears network cache (AWS Cloudfront)
