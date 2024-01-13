@@ -27,6 +27,7 @@ import subprocess
 # INPUT ARGUMENTS
 local_files = "/Users/jro/JRO-Sync/_Websites/Jonathan.Rogivue.net/"
 s3_bucket_url = "s3://jonathan.rogivue.net-public/"
+# remote_repository_url = 
 
 mkdocs_config = local_files + "mkdocs.yml"
 local_built_site = local_files + "site/"
@@ -50,7 +51,7 @@ print("----------")
 subprocess.run(["git", "add", local_files], cwd=local_repository_path)
 commit_message = "Content changes - Deployment automation"
 subprocess.run(["git", "commit", "-m", commit_message], cwd=local_repository_path) 
-
+subprocess.run(["git", "push", "origin", "master"])
 
 # Build site using MkDocs
 
