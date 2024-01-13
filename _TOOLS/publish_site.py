@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Publish MkDocs Site to AWS
 # Updated: 2024-01-13 / JRO
 # --------------------------
