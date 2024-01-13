@@ -37,16 +37,15 @@ local_repository_path = local_files
 
 
 # Intro
-print("----------")
-print("▶ Site Publisher")
+print("\n▶ Site Publisher")
 print("----------")
 
 # Publish to remote repository
 # -----------------------------
 # git push origin master (?)
 
-print("----------")
-print("▶ Committing changes to Repository (git)")
+
+print("\n▶ Committing changes to Repository (git)")
 print("----------")
 subprocess.run(["git", "add", local_files], cwd=local_repository_path)
 commit_message = "Content changes - Deployment automation"
@@ -54,21 +53,21 @@ subprocess.run(["git", "commit", "-m", commit_message], cwd=local_repository_pat
 
 
 # Build site using MkDocs
-print("----------")
-print("▶ Running MkDocs build...")
+
+print("\n▶ Running MkDocs build...")
 print("----------")
 subprocess.run(["mkdocs", "build", "--config-file", mkdocs_config])
 
 
 # Check Links
-print("----------")
-print("▶ Checking local files for broken links...")
+
+print("\n▶ Checking local files for broken links...")
 print("----------")
 subprocess.run(["linkchecker", local_built_site])
 
 # Upload/Sync to File server (AWS S3)
 # Documentation: https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/sync.html
-print("----------")
-print("▶ Upload-syncing local files to remote file server (AWS S3)")
+
+print("\n▶ Upload-syncing local files to remote file server (AWS S3)")
 print("----------")
 subprocess.run(["aws", "s3", "sync", local_built_site, s3_bucket_url])
