@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#
 # Publish MkDocs Site to AWS
 # Updated: 2024-01-13 / JRO
 # --------------------------
@@ -27,7 +28,7 @@ import subprocess
 # AWS CLI
 # Git
 # MkDocs
-# Linkchecker
+# Linkchecker   
 
 # INPUT ARGUMENTS
 local_files = "/Users/jro/JRO-Sync/_Websites/Jonathan.Rogivue.net/"
